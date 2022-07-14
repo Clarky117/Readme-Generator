@@ -1,5 +1,6 @@
 // // TODO: Include packages needed for this application
 
+
 // // TODO: Create an array of questions for user input
 // const questions = [];
 
@@ -20,22 +21,75 @@ const inquirer = require('inquirer');
 // Goal - Generate Markdown Generator to use for future projects
 
 // Ask the user questions;
-
-// What us the Title of Project?
-
 // Sections entitled;
-//  Description,
-//  Table of Contents,
-//  Installation,
-//  Usage,
-//  License,
-//  Contributing,
-//  Tests,
-//  and Questions - is contact info, ask Github and Email
+inquirer.prompt([
+    // What us the Title of Project?   
+    {
+        type: 'input',
+        message: 'What is the title of your project?',
+        name: 'title',
+    },    
+    // Add License badge under title of project
+    // https://github.blog/2015-03-09-open-source-license-usage-on-github-com/
+    {
+        type: 'list',
+        message: 'What is the license of your project?',
+        name: 'license',
+        choices: [
+            'MIT', 'GPL-v2', 'Apache', 'GPL-v3', 'no-license',
+        ]
+    },
+    // Auto include Table Of Contents with the below sections
+    //  Description,
+    {
+        type: 'input',
+        message: 'What is the description of your project?',
+        name: 'description',
+    },
+    //  Table of Contents - fill this with each section
+    //  Installation,
+    {
+        type: 'input',
+        message: 'What are the installation instructions of your project?',
+        name: 'installation',
+    },
+    //  Usage,
+    {
+        type: 'input',
+        message: 'What is the usage of your project?',
+        name: 'usage',
+    },
+    //  License - fill this with the choice of license
+    //  Contributing,
+    {
+        type: 'input',
+        message: 'What is the contribution of your project?',
+        name: 'contributing',
+    },
+    // Tests,
+    {
+        type: 'input',
+        message: 'What are the tests of your project?',
+        name: 'tests',
+    },
+    //  and Questions - is contact info, ask Github and Email
+    {
+        type: 'input',
+        message: 'What is your github username?',
+        name: 'github',
+    },
+    {
+        type: 'input',
+        message: 'What is your email address?',
+        name: 'email',
+    },
+]).then((answers) => {
+    console.log(answers);
+})
 
-// Auto include Table Of Contents with the above sections
 
-// Add License badge under title of project
+
+
 
 // Once all questions are asked we want to generate readme in output folder with user responses
 
