@@ -17,6 +17,7 @@
 
 
 const inquirer = require('inquirer');
+const generateMarkdown = require('./utils/generate-markdown');
 
 // Goal - Generate Markdown Generator to use for future projects
 
@@ -36,7 +37,7 @@ inquirer.prompt([
         message: 'What is the license of your project?',
         name: 'license',
         choices: [
-            'MIT', 'GPL-v2', 'Apache', 'GPL-v3', 'no-license',
+            'MIT', 'GPLv2', 'Apache', 'GPLv3', 'None',
         ]
     },
     // Auto include Table Of Contents with the below sections
@@ -85,6 +86,8 @@ inquirer.prompt([
     },
 ]).then((answers) => {
     console.log(answers);
+    const markDown = generateMarkdown(answers) 
+    console.log(markDown)
 })
 
 
