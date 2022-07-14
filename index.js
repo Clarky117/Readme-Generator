@@ -1,23 +1,8 @@
-// // TODO: Include packages needed for this application
-
-
-// // TODO: Create an array of questions for user input
-// const questions = [];
-
-// // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
-
-// // TODO: Create a function to initialize app
-// function init() {}
-
-// // Function call to initialize app
-// init();
-
-
-
-
+// my imports
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generate-markdown');
+const fs = require('fs/promises');
+const path = require('path');
 
 // Goal - Generate Markdown Generator to use for future projects
 
@@ -57,20 +42,20 @@ inquirer.prompt([
     //  Usage,
     {
         type: 'input',
-        message: 'What is the usage of your project?',
+        message: 'What is the usage information of your project?',
         name: 'usage',
     },
     //  License - fill this with the choice of license
     //  Contributing,
     {
         type: 'input',
-        message: 'What is the contribution of your project?',
+        message: 'What are the contributing guidelines of your project?',
         name: 'contributing',
     },
     // Tests,
     {
         type: 'input',
-        message: 'What are the tests of your project?',
+        message: 'What are the testing instructions of your project?',
         name: 'tests',
     },
     //  and Questions - is contact info, ask Github and Email
@@ -84,15 +69,17 @@ inquirer.prompt([
         message: 'What is your email address?',
         name: 'email',
     },
+    // Once all questions are asked we want to generate readme in output folder with user responses
 ]).then((answers) => {
-    console.log(answers);
-    const markDown = generateMarkdown(answers) 
-    console.log(markDown)
-})
+    // testing to make sure i receive my user data
+    // console.log(answers);
+    const markDown = generateMarkdown(answers);
+    // testing to make sure it logs me a usable readme
+    // console.log(markDown);
 
-
-
-
-
-// Once all questions are asked we want to generate readme in output folder with user responses
-
+    const outputPath = path.join(__dirname, 'output', 'generated-markdown.md');
+    fs.writeFile(outputPath, markDown, 'utf-8')
+        .then(() => {
+            console.log('Readme Successfully Generated');
+        });
+});

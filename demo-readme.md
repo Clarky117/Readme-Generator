@@ -25,6 +25,6 @@
 
 ## Contact
 
-Visit my github repository here: [dummy](https://github.com/Clarky117)
+Visit my github repository here: []()
 
-Email me here: clarky117@outlook.com
+Email me here: 
