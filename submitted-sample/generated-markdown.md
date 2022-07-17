@@ -1,6 +1,6 @@
 
 
-# Trial
+# Sample
 
 ![None](https://img.shields.io/badge/license-None-blue)
   
@@ -15,15 +15,15 @@
   
 ## Description
 
-no description
+This is my submitted sample. To my grader, i hope you are having a great day!
   
 ## Installation
 
-no instructions
+Sam (instructor) said you guys have that covered :)
   
 ## Usage
 
-no usage
+Free use
   
 ## License
 
@@ -31,11 +31,11 @@ Project is covered under this license: None
   
 ## Contributing
 
-no contributions except me
+Any contributions
   
 ## Tests
 
-manual testing
+Manual testing
   
 ## Contact
 
