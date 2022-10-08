@@ -6,7 +6,6 @@
   
 ## Table of Contents
 1. [Description](#description)
-2. [Key Points](#key-points)
 3. [Skills Used](#skills-used)
 4. [Readme Visual](#readme-visual)
 5. [Things To Work On](#things-i-want-to-work-on)
@@ -14,11 +13,7 @@
   
 ## Description
 
-In week 9 of the UWA coding bootcamp we have been tasked with creating a readme generator that we could use for future assignments. With my previous assignments, and even the group project, I have fallen into my own pattern of the type of readme I create. I wouldn't mind feedback whether I should use the new format we have been provided, or at this point in time with the assignments we are doing, if my current format is okay. I'll do whatver nets me the highest possible grade.
-
-## Key Points
-
-As stated above, when creating a new project out there in the big wide world of web developement, it is pivotal to gain skills that increase our time management. One such example is the ability to create a command line application that can ask you a few simple questions and then auto populate and generate you a usable file.
+Readme generator that runs on the command line, asks you a few simple questions and then auto populates and generates you a usable file.
 
 ## Skills Used
 
